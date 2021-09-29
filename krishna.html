@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>janmashtami</title>
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    #wrap {
+        background: linear-gradient(180deg, rgb(255, 95, 162), rgb(135, 255, 245));
+        height: 37.5em;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        transition: 0.5s;
+    }
+
+    #h1 {
+        position: absolute;
+        z-index: 1;
+        margin-left: 80em;
+        margin-top: 15em;
+    }
+
+    #h2 {
+        position: absolute;
+        margin-left: 53em;
+        margin-top: -23em;
+        transition: 0.5s;
+        transform: scaleX(-1);
+    }
+
+    #krish {
+        position: absolute;
+        z-index: 2;
+        margin-left: -80em;
+        transition: 0.7s;
+        animation: animate linear 1s infinite;
+    }
+
+    @keyframes animate {
+        50% {
+            transform: skewY(2deg);
+            transform: skewX(1.5deg);
+        }
+    }
+
+    .leaves {
+        height: 10em;
+        width: 10em;
+        margin-top: 5em;
+        position: absolute;
+       
+        animation: leaf 10s linear infinite;
+    }
+
+    @keyframes leaf {
+        0% {
+            transform: translateY(19px);
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        70% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(40vh);
+            opacity: 0;
+        }
+    }
+
+    .leaves:nth-child(2) {
+        margin-left: 30em;
+        animation-delay: 3s;
+        margin-top: -3em;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .leaves:nth-child(3) {
+        margin-left: 30em;
+        animation-delay: 4s;
+        margin-top: -3em;
+        position: absolute;
+        z-index: -1;
+    }
+</style>
+
+<body>
+
+    <div id="wrap">
+        <img class="leaves" src="../KRISHNA/floating_flower1.png" style="width: 45em;height: 20em;transform: scale(0.1);position: absolute;margin-top: -10em;
+    z-index: 1;">
+        <img class="leaves" src="../KRISHNA/floating_flower1.png" style="width: 45em;height: 20em;transform: scale(0.1);position: absolute;margin-top: -13em;
+    z-index: 1;">
+
+        <img id="krish" src="krishna.png">
+        <img id="h1" src="makkhan-handi.png">
+        <img id="h2" src="makkhan-handi.png">
+    </div>
+</body>
+<script>
+    setTimeout(function () {
+        var d = document.getElementById("wrap");
+        var a = document.getElementById("h1");
+        a.style.transition = "0.5s";
+        a.style.marginLeft = "36em";
+        d.style.background = "linear-gradient(45deg, rgb(25, 5, 177), rgb(135, 255, 245))";
+    }, 1000);
+    setTimeout(function () {
+        var d = document.getElementById("wrap");
+        d.style.background = "linear-gradient(60deg, rgb(235, 150, 170), rgb(251, 34, 125))";
+        var b = document.getElementById("h2");
+        b.style.marginTop = "13em";
+    }, 2500);
+    setTimeout(function () {
+        var d = document.getElementById("wrap");
+        var c = document.getElementById("krish");
+        c.style.marginLeft = "18em";
+        d.style.background = "linear-gradient(-45deg, rgb(251, 34, 125),skyblue, rgb(135, 15, 255))";
+    }, 4000);
+
+</script>
+
+</html>
